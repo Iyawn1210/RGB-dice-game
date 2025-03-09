@@ -1,0 +1,392 @@
+body {
+  background-color: lightgoldenrodyellow;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  font-family: "Press Start 2P", sans-serif;
+
+  position: relative;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url(bgCasino.jpg);
+  background-size: cover;
+  overflow: hidden;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+box {
+  display: flex;
+  flex-direction: column;
+  height: 1100px;
+  width: 850px;
+  align-self: center;
+  z-index: 2;
+}
+.upper-main {
+  flex: 1;
+  background-color: #9e9f984d;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.main-tooltip{
+  position: absolute;
+
+  right: -150px;
+  top: 30px;
+  width: 150px;
+  font-size: 17px;
+  color: white;
+
+  border-radius: 5px;
+
+  padding: 10px 20px 10px 20px;
+
+  background-color: rgba(85, 85, 85, 0.93);
+  z-index: 8;
+
+  opacity: 0;
+}
+.game-info-button:hover .main-tooltip{
+  opacity: 1;
+}
+.game-info-button {
+  position: absolute;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  right: 10px;
+  top: 10px;
+
+  border-radius: 30px;
+  border: none;
+
+  transition: opacity 0.3s;
+}
+.game-info-button img {
+  width: 30px;
+  height: 30px;
+}
+.game-info-button:hover {
+  width: 40px;
+  height: 40px;
+}
+.game-info-button:active {
+  opacity: 0.8;
+}
+
+.dice-group {
+  background-color: white;
+  width: 50%;
+  height: 60%;
+
+  display: flex;
+  flex-direction: row;
+
+  border: 2px solid rgba(121, 121, 121, 0.508);
+  border-width: 10px;
+  border-radius: 10px;
+
+  position: relative;
+}
+.dice-group .hr{
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+
+  height: 9px;
+  background-color: white;
+}
+.red-blue,
+.green-yellow {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.red-blue{
+  margin-right: 10px;
+}
+
+.red-blue img,
+.green-yellow img {
+  width: 100%;
+  height: 50%;
+}
+
+.lower-main {
+  height: 300px;
+  background-color: #103a1bdb;
+  margin-top: 10px;
+
+  border-radius: 20px;
+  border: 5px solid rgb(191, 191, 191);
+
+  display: flex;
+  flex-direction: column;
+}
+.upper-part {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upper-part h1 {
+  font-size: 30px;
+  color: rgb(255, 247, 154);
+}
+.lower-part {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+.left-lower-part,
+.middle-lower-part,
+.right-lower-part {
+  flex: 1;
+}
+.left-lower-part {
+  position: relative;
+}
+.status-box {
+  background-color: rgb(252, 250, 210);
+  margin-left: 100px;
+  margin-right: 10px;
+
+  height: 150px;
+  width: 130px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 0;
+}
+
+.status-box p {
+  margin-left: 16px;
+  margin-right: 10px;
+  margin-top: 0;
+  font-size: 20px;
+
+  height: 50%;
+}
+.left-lower-part img {
+  position: absolute;
+
+  bottom: 0px;
+  left: -20px;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+}
+.middle-lower-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-lower-part button {
+  padding: 70px;
+  border-radius: 200px;
+  background: linear-gradient(45deg, #d50d0d, #5f0000);
+  border: 5px solid grey;
+
+  transition: background 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+.middle-lower-part button:hover {
+  background: linear-gradient(45deg, #5f0000, #d50d0d);
+}
+.middle-lower-part button:active {
+  opacity: 0.7;
+}
+.right-lower-part {
+  display: flex;
+  flex-direction: column;
+}
+.color-box {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.color-box label {
+  color: rgb(251, 255, 195);
+}
+.color-box #color {
+  padding: 10px 70px 10px 10px;
+  font-family: "Press Start 2P", sans-serif;
+
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.bet-box {
+  flex: 1;
+}
+.bet-box label {
+  color: rgb(251, 255, 195);
+}
+.bet-box #bet {
+  width: 40%;
+  height: 100%;
+  padding: 10px 30px 10px 20px;
+
+  font-size: 25px;
+  border-radius: 10px;
+
+  font-family: "Press Start 2P", sans-serif;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(5, 5, 5, 0.428);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-height: 1250px){
+  box {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    width: 600px;
+    align-self: center;
+    z-index: 2;
+  }
+  .upper-part h1 {
+    font-size: 25px;
+
+  }
+  .status-box {
+
+    height: 120px;
+
+  }
+  
+  .status-box p {
+   font-size: 16px;
+  }
+
+  .middle-lower-part button {
+    padding: 60px;
+
+  }
+
+  .color-box {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  .color-box label {
+    color: rgb(251, 255, 195);
+  }
+  .color-box label,.bet-box label{
+    font-size: 15px;
+  }
+  .color-box #color {
+    padding: 10px 70px 10px 5px;
+    font-family: "Press Start 2P", sans-serif;
+  
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+
+  .bet-box #bet {
+    width:40%;
+    height: 60%;
+    padding: 6px 15px 6px 10px;
+  
+    font-size: 25px;
+
+  }
+
+}
+
+
+@media (max-height: 1050px){
+  box {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 600px;
+    align-self: center;
+    z-index: 2;
+  }
+}
+
+@media (max-height: 960px)  {
+  box {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 500px;
+    align-self: center;
+    z-index: 2;
+  }
+  
+  .upper-part h1 {
+    font-size: 20px;
+
+  }
+  .status-box {
+
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+
+  }
+  
+  .status-box p {
+   font-size: 14px;
+  }
+
+  .middle-lower-part button {
+    padding: 50px;
+
+  }
+
+  .color-box {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  .color-box label,.bet-box label{
+    font-size: 13px;
+  }
+  .color-box #color {
+    padding: 10px 40px 10px 5px;
+    width: 90%;
+    font-family: "Press Start 2P", sans-serif;
+  
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .bet-box #bet {
+    width: 40%;
+    height: 60%;
+    padding: 6px 15px 6px 10px;
+  
+    font-size: 20px;
+
+  }
+}

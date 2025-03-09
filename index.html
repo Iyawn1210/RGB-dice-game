@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RGB dice game</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left-part">
+        <button class="restart-button">RESTART
+          <p class="restart-tooltip">Restart whole game</p>
+        </button>
+      </div>
+      <div class="middle-part">
+        <h1 class="title">RGB dice game</h1>
+      </div>
+      <div class="right-part">
+        <div class="money-status ">
+          <h3 class="dollar">$<span class="money">0</span></h3>
+          <img src="coin.png" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="overlay"></div>
+      <box>
+        <section class="upper-main">
+          <button class="game-info-button">
+            <p class="main-tooltip">Game info</p>
+            <img src="info.png" />
+          </button>
+          <div class="dice-group">
+            <div class="hr"></div>
+            <div class="red-blue">
+              <img src="dice1.jpg" class="dice-a" alt="red dice" />
+              <img src="dice3.jpg" class="dice-b" alt="blue dice" />
+            </div>
+            <div class="green-yellow">
+              <img src="dice2.jpg" class="dice-c" alt="green dice" />
+
+              <img src="dice4.jpg" class="dice-d" alt="yellow dice" />
+            </div>
+          </div>
+        </section>
+        <section class="lower-main">
+          <section class="upper-part">
+            <h1 class="update-text">WELCOME TO THE GAME</h1>
+          </section>
+          <section class="lower-part">
+            <div class="left-lower-part">
+              <div class="status-box">
+                <p class="status custom-font">Press the red button</p>
+              </div>
+              <img src="leprichaun.png" />
+            </div>
+            <div class="middle-lower-part">
+              <button class="roll-button"></button>
+            </div>
+            <div class="right-lower-part">
+              <div class="color-box">
+                <label for="color">Choose Color</label><br />
+                <select id="color">
+                  <option value="red">Red</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="yellow">Yellow</option>
+                </select>
+              </div>
+              <div class="bet-box">
+                <label for="bet">Bet here</label>
+                <input type="number" id="bet" value="1" />
+              </div>
+            </div>
+          </section>
+        </section>
+      </box>
+    </main>
+    <div class="modal custom-font pop-up">
+      <h1>How to play the game</h1>
+      <p>
+        In the Coin Master game, you place a bet between $5 and $10 and choose a color:
+        yellow, red, green, or blue. For example, you might bet $10 on yellow.
+        When you roll the dice, four dice will appear, each showing different
+        colors. If any of the dice match the color you bet on, you win, and your
+        winnings are determined by the number of matching dice. For instance, if
+        three of the dice show yellow, your money will multiply by 3.
+        Additionally, if you bet $5 and your current money is greater than $20,
+        and you lose, your bet of $5 will be multiplied by 4 and that amount
+        will be deducted from your current money or wallet. Enjoy the game and
+        good luck!
+      </p>
+      <button class="close-modal">Okay</button>
+    </div>
+    <div class="overlay2 hidden"></div>
+  </body>
+  <script src="script.js"></script>
+</html>

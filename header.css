@@ -1,0 +1,162 @@
+header {
+  background-color: #417d51;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 5px;
+}
+.bg-color{
+  background-color: rgb(245, 85, 85);
+}
+
+.left-part {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-part button {
+  padding: 30px 40px 30px 40px;
+  font-size: 23px;
+  font-weight: bold;
+
+  border-radius: 5px;
+  background-color: rgb(245, 240, 212);
+  border: none;
+  color: rgb(53, 53, 53);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+
+  position: relative;
+
+
+}
+
+.restart-tooltip{
+  position: absolute;
+
+  bottom: -80px;
+  width: 200px;
+  font-size: 17px;
+  color: white;
+
+  border-radius: 5px;
+
+  padding: 10px 20px 10px 20px;
+
+  background-color: rgba(85, 85, 85, 0.93);
+  z-index: 7;
+
+  opacity: 0;
+}
+.restart-button:hover .restart-tooltip{
+  opacity: 1;
+}
+.restart-button:hover {
+  background-color: rgb(248, 248, 131);
+}
+.restart-button:active {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.middle-part {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-part h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(250, 255, 200);
+  position: relative;
+
+  text-transform: uppercase;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5), 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+.right-part {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+.money-status {
+  margin-left: 5px;
+  margin-right: 10px;
+  background-color: rgb(175, 255, 175);
+  width: 200px;
+  padding-left: 30px;
+  border-radius: 20px;
+  border: 2px solid rgb(51, 51, 51);
+  border-width: 3px;
+
+  position: relative;
+}
+.background{
+  background-color: rgb(230, 173, 173);
+}
+.money-status .dollar {
+  color: rgb(53, 53, 53);
+}
+.right-part img {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 1170px) {
+  .left-part button {
+    padding: 25px 30px 25px 30px;
+    font-size: 17px;
+  }
+  .middle-part h1 {
+    font-size: 50px;
+  }
+
+  .money-status {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 200px;
+    padding-left: 30px;
+    border-radius: 20px;
+    border: 2px solid rgb(51, 51, 51);
+    border-width: 3px;
+
+    position: relative;
+  }
+  .money-status .dollar {
+    color: rgb(53, 53, 53);
+  }
+  .money,
+  .money-status .dollar {
+    font-size: 15px;
+  }
+}
+@media (max-width: 940px) {
+  .left-part button {
+    padding: 15px 20px 15px 20px;
+    font-size: 17px;
+    margin-left: 40px;
+  }
+  .middle-part h1 {
+    font-size: 40px;
+  }
+  .money,
+  .money-status .dollar {
+    font-size: 10px;
+  }
+  .money-status{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 800px) {
+  .middle-part h1 {
+    font-size: 30px;
+  }
+}
